@@ -1,9 +1,0 @@
-python-dotenv
-fastapi
-uvicorn
-requests
-pydantic
-httpx
-fastmcp
-mcp
-asyncio
