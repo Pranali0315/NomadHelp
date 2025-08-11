@@ -45,6 +45,10 @@ mcp = FastMCP("Travel Guide MCP Server", auth=SimpleBearerAuthProvider(TOKEN), s
 async def validate() -> str:
     return MY_NUMBER
 
+@mcp.tool
+async def about() -> dict:
+    return {"name": "NomadHelp", "description": "A server which lets Puch AI give you travel plans for efficient travel"}
+
 async def get_location_info(location: str) -> dict:
     """Get location data from Nominatim"""
     url = f"https://nominatim.openstreetmap.org/search?q={quote_plus(location)}&format=json&addressdetails=1&limit=1"
